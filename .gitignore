@@ -1,0 +1,60 @@
+# Virtual Environment
+venv/
+env/
+.env
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# IDE
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.code-workspace
+
+# OS — Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# OS — Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Logs
+*.log
+logs/
+
+# AWS
+.aws/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/

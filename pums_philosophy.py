@@ -96,7 +96,7 @@ def upload_pums_to_s3(bucket_name, records):
         return False
     
 if __name__ == "__main__":
-    bucket_name = 'philosophyandlogic'
+    bucket_name = 'pums_philosophy'
 
     # If check_s3_bucket_exists returns True, run the script
     if check_s3_bucket_exists(bucket_name):
