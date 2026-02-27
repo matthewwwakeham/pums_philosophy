@@ -1,3 +1,5 @@
+# Fetch public use microdata sample from the Census ACS PUMS API for philosophy graduate records and upload to S3.
+
 import logging
 import os
 import boto3
@@ -46,7 +48,7 @@ def check_s3_bucket_exists(bucket_name):
 
 def grab_pums_api():
     """
-    Grab philosophy graduate records from the Census ACS PUMPS API. 
+    Grab philosophy graduate records from the Census ACS PUMS API. 
     A list (one record per respondent) is returned.
     """
     url = f"https://api.census.gov/data/{YEAR}/acs/{DATASET}/pums"
@@ -59,7 +61,7 @@ def grab_pums_api():
     session = requests.Session()
     session.mount('https://', HTTPAdapter(max_retries=3))
 
-    logging.info(f"Fetching PUMPS {YEAR} {DATASET} for FOD1P={FOD_CODE}.")
+    logging.info(f"Fetching PUMS {YEAR} {DATASET} for FOD1P={FOD_CODE}.")
     response = session.get(url, params=params, timeout=120)
     response.raise_for_status()
 
@@ -78,7 +80,7 @@ def upload_pums_to_s3(bucket_name, records):
     Upload PUMS records to S3.
     """
     s3 = boto3.client('s3')
-    s3_key = f"raw/pums/year={YEAR}/dataset={DATASET}/pums_philosophy_{YEAR}.json"
+    s3_key = f"philosophy-5-year-public-microdata-sample-{YEAR}.json"
 
     body = '\n'.join(json.dumps(record) for record in records)
 
@@ -96,7 +98,7 @@ def upload_pums_to_s3(bucket_name, records):
         return False
     
 if __name__ == "__main__":
-    bucket_name = 'pums_philosophy'
+    bucket_name = 'philosophy-5-year-public-microdata-sample-2023'
 
     # If check_s3_bucket_exists returns True, run the script
     if check_s3_bucket_exists(bucket_name):

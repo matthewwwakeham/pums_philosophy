@@ -1,0 +1,2 @@
+// Rename to .env and add your own API key. You can request a key here: https://api.census.gov/data/key_signup.html
+CENSUS_API_KEY=
