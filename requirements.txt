@@ -1,3 +1,4 @@
+// This file is used to specify the dependencies for the project. It lists the required packages and their versions, which can be installed using pip.
 requests
 python-dotenv
 boto3

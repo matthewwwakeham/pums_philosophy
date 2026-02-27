@@ -1,4 +1,4 @@
-# Fetch public use microdata sample from the Census ACS PUMS API for philosophy graduate records and upload to S3.
+# Fetch the public use microdata sample from the Census ACS PUMS API for philosophy graduate records and upload to S3.
 
 import logging
 import os

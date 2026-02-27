@@ -43,10 +43,6 @@ Desktop.ini
 $RECYCLE.BIN/
 *.lnk
 
-# Logs
-*.log
-logs/
-
 # AWS
 .aws/
 
@@ -58,3 +54,7 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Logs
+*.log
+logs/
