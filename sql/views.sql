@@ -73,3 +73,13 @@ SELECT
 FROM PUBLIC.v_philosophy_graduate_degree
 WHERE ESRIN ('1','3')-- employed in private or government
 GROUP BY OCCP;
+
+-- Bachelor pop, avg wage, occupation
+CREATE OR REPLACE VIEW "philosophy-5-year-public-microdata-sample-2023".PUBLIC.V_BACHELOR_WAGE_BY_OCCUPATION_NAMED AS
+SELECT
+    o.occp_title AS occupation,
+    v.population,
+    v.avg_wage
+FROM PUBLIC.v_bachelor_wage_by_occupation v
+LEFT JOIN occupation_codes o ON v.occupation = o.occp_code
+ORDER BY v.population DESC;
