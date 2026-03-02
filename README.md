@@ -1,12 +1,11 @@
-### Where do philosophy graduates end up?
+## Where do philosophy graduates end up?
 In this project we look at a microdata sample to determine the occupations, industries, and wages philosophy graduates may achieve.
 
-### Info - Public Use Microdata Sample
+## Info - Public Use Microdata Sample
 PUMS are datasets based on data collected from the American Community Survey. Responses are self-reported.
 
-### Getting Started
-## API
-# Getting A Key
+## Getting Started
+# Getting An API Key
 Rename the file called ".example env" to ".env" and add your own API key. You can request a key here: https://api.census.gov/data/key_signup.html.
 
 ## Script
@@ -31,3 +30,4 @@ Drag and drop the different buckets of data into the proper visualizations.
 
 ## Dashboards and PowerPoint
 A file containing the dashboards and associated data can be downloaded and viewed. Additionally, a PowerPoint going over some of the results is available.
+
