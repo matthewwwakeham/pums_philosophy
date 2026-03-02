@@ -14,3 +14,9 @@ WHERE FOD1P = '6212'
 AND ESR IN ('1', '3')
 AND WAGP::FLOAT > 0
 AND SCHL IN ('21', '22', '23', '24');
+
+-- Grab occupation codes
+CREATE TABLE occupation_codes (
+    occp_code VARCHAR,
+    occp_title VARCHAR
+);
