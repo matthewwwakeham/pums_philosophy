@@ -20,3 +20,8 @@ CREATE TABLE occupation_codes (
     occp_code VARCHAR,
     occp_title VARCHAR
 );
+
+CREATE TABLE IF NOT EXISTS PUBLIC.occupation_labels (
+    occp_code VARCHAR(4) PRIMARY KEY,
+    occp_title VARCHAR(200)
+);
